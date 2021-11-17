@@ -5,10 +5,16 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 .container {
     width: 80%;
     height: 100%;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
 }
 
 /* *****HEADER***** */
@@ -18,9 +24,7 @@ header {
 }
 
 header > .container {
-    display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
 .logo {
@@ -64,14 +68,23 @@ header > .container {
 
 /* *****MAIN***** */
 main {
-    height: calc(100vh - 160px);
+    height: calc(100vh - 140px);
     background-color: #80fed5;
 }
 
 /* *****FOOTER***** */
 footer {
-    height: 80px;
+    height: 60px;
     background-color: #fffeff;
+}
+
+.important {
+    color: #257bc8;
+    cursor: pointer;
+}
+
+.important:hover {
+    text-decoration: underline;
 }
 
 
