@@ -86,6 +86,9 @@ main {
 
 .box {
     border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     float: left;
 }
 
@@ -122,6 +125,6 @@ footer {
 
 /* *****DEBUG***** */
 
-.debug .container_box {
+/* .debug .container_box {
     background-color: yellow;
-}
+} */
