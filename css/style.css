@@ -72,6 +72,38 @@ main {
     background-color: #80fed5;
 }
 
+.container_box {
+    width: 750px;
+    height: 750px;
+    margin: auto;
+}
+
+.container_box::after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+.box {
+    border: 1px solid black;
+    float: left;
+}
+
+.box.easy {
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+}
+
+.box.hard {
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+}
+
+.box.extreme {
+    width: calc(100% / 7);
+    height: calc(100% / 7);
+}
+
 /* *****FOOTER***** */
 footer {
     height: 60px;
@@ -89,3 +121,7 @@ footer {
 
 
 /* *****DEBUG***** */
+
+.debug .container_box {
+    background-color: yellow;
+}
