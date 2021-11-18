@@ -4,34 +4,55 @@
 // con difficoltà 3 => tra 1 e 49
 // Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro.
 
-const button = document.querySelector('.btn');
+const play = document.querySelector('.btn');
 
-button.addEventListener("click",
+play.addEventListener("click",
     function() {
-        const container = document.querySelector('.container_box');
         const range = document.getElementById('level').value;
+        let container = document.querySelector('.container_box');
+        // svuoto il container_box
         container.innerHTML = '';
         
+        let numBox = 0;
+        let classBox = '';
+
         switch(range) {
             case '1':
-                for(let i = 1; i <= 100; i++) {
-                    container.innerHTML += `<div class="box easy">${i}</div>`;
-                }
-
+                numBox = 100;
+                classBox = 'easy';
                 break;
+
             case '2':
-                for(let i = 1; i <= 81; i++) {
-                    container.innerHTML += `<div class="box hard">${i}</div>`;
-                }    
+                numBox = 81;
+                classBox = 'hard';
+                break;
 
-                break;
             case '3':
-                for(let i = 1; i <= 49; i++) {
-                    container.innerHTML += `<div class="box extreme">${i}</div>`;
-                } 
+                numBox = 49;
+                classBox = 'extreme';
                 break;
-          } 
+        } 
+
+        for(let i = 1; i <= numBox; i++) {
+            // creo il tag <div class="box extreme">i</div> e lo aggiungo al DOM
+            const div = document.createElement('div');
+            const text = document.createTextNode(i);
+            div.className = 'box';
+            div.classList.add(classBox);
+            div.appendChild(text);
+            container.appendChild(div);
+            // ad ogni tag aggiungo il comando click
+            div.addEventListener("click", 
+                function() {
+                    this.classList.add('lightblue');
+                }
+            );
+        } 
 
     }
 );
+
+// *****FUNZIONI******
+
+
 

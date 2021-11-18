@@ -68,8 +68,8 @@ header > .container {
 
 /* *****MAIN***** */
 main {
-    height: calc(100vh - 140px);
     background-color: #80fed5;
+    padding: 5px 0;
 }
 
 .container_box {
@@ -90,6 +90,7 @@ main {
     justify-content: center;
     align-items: center;
     float: left;
+    cursor: pointer;
 }
 
 .box.easy {
@@ -105,6 +106,10 @@ main {
 .box.extreme {
     width: calc(100% / 7);
     height: calc(100% / 7);
+}
+
+.box.lightblue {
+    background-color: lightblue;
 }
 
 /* *****FOOTER***** */
